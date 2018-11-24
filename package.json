@@ -1,0 +1,27 @@
+{
+  "name": "rbk5-mvp",
+  "version": "1.0.0",
+  "description": "Phones Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AzharAlbakri/rbk5-mvp.git"
+  },
+  "author": "Azhar Albakri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AzharAlbakri/rbk5-mvp/issues"
+  },
+  "homepage": "https://github.com/AzharAlbakri/rbk5-mvp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}
