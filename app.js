@@ -5,7 +5,8 @@ var phones = require('./fakeData/phones').phones;
 var app = express()
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-app.use('/static', express.static(__dirname + '/client'));
+// app.use('/static', express.static(__dirname + '/client'));
+app.use(express.static('./client'));
 
 
 app.get('/', function(req, res){

@@ -4,16 +4,17 @@ var app = angular.module('phone', []);
 app.controller('myCtrl', function($scope, $http) {
 	$scope.search = function() {
 		console.log("hiii")
-	};
-    $scope.Brand = "Brand";
-    $scope.minPrice = "minPrice";
-    $scope.maxPrice = "maxPrice";
+		var obj = {};
+obj.Brand = $scope.Brand
+obj.Price = [JSON.parse($scope.minPrice),JSON.parse($scope.maxPrice)]
+ $http.post("/filter",obj)
+    .then(function(response) {
+        // $scope.myWelcome = response.data;
+        console.log(response.data)
 
-$http({
-  url: '/filter',
-  method: 'POST',
- 
-});
+        $scope.phones = response.data;
+    });
+	};
 
 
 });
